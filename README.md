@@ -1,59 +1,193 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Stockify — Inventory Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi manajemen inventaris berbasis web yang dibangun menggunakan Laravel dan MySQL. Stockify membantu pengguna mengelola data produk, kategori, supplier, serta mencatat pergerakan stok masuk dan keluar.
 
-## About Laravel
+## ✨ Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Dashboard** — Menampilkan ringkasan data inventaris.
+- **Manajemen Produk** — Menambah, melihat, mengubah, mencari, dan menghapus produk.
+- **Manajemen Kategori** — Mengelola kategori barang.
+- **Manajemen Supplier** — Mengelola informasi pemasok.
+- **Pergerakan Stok** — Mencatat transaksi stok masuk dan stok keluar.
+- **Laporan** — Melihat data produk dan riwayat pergerakan stok berdasarkan periode.
+- **Validasi Data** — Memeriksa data yang dimasukkan melalui formulir aplikasi.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Teknologi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP
+- Laravel
+- MySQL
+- Blade Template
+- HTML dan CSS
+- XAMPP
+- Composer
 
-## Learning Laravel
+## 📸 Screenshot Aplikasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 1. Dashboard
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Menampilkan ringkasan inventaris dan informasi stok.
 
-## Laravel Sponsors
+![Dashboard 1](Screenshot/01-dashboard.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![Dashboard 2](Screenshot/02-dashboard.png)
 
-### Premium Partners
+### 2. Manajemen Produk
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Halaman daftar produk dan pengelolaan data barang.
 
-## Contributing
+![Daftar Produk](Screenshot/03-produk.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Manajemen Kategori
 
-## Code of Conduct
+Halaman pengelolaan kategori barang.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Daftar Kategori](Screenshot/04-kategori.png)
 
-## Security Vulnerabilities
+![Detail Kategori](Screenshot/15-Detail%20Kategori.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 4. Manajemen Supplier
 
-## License
+Halaman untuk melihat dan mengelola data supplier.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Supplier 1](Screenshot/05-supplier.png)
+
+![Supplier 2](Screenshot/06-supplier.png)
+
+### 5. Pergerakan Stok
+
+Halaman pencatatan dan pemantauan stok masuk maupun stok keluar.
+
+![Pergerakan Stok](Screenshot/07-PergerakanStok.png)
+
+### 6. Laporan
+
+Halaman laporan produk dan pergerakan stok.
+
+![Laporan 1](Screenshot/08-Laporan.png)
+
+![Laporan 2](Screenshot/09-Laporan.png)
+
+### 7. Pengelolaan Data Produk
+
+Contoh tampilan ketika menghapus, menambahkan, mencari, dan mengedit produk.
+
+**Produk sebelum dihapus**
+
+![Produk sebelum dihapus](Screenshot/10-Produk%20Di%20Hapus.png)
+
+**Konfirmasi atau hasil penghapusan produk**
+
+![Produk berhasil dihapus](Screenshot/11-Produk%20Berhasil%20Di%20Hapus.png)
+
+**Form tambah produk**
+
+![Tambah produk 1](Screenshot/12-Tambah%20Produk.png)
+
+![Tambah produk 2](Screenshot/13-Tambah%20Produk.png)
+
+**Pencarian produk**
+
+![Pencarian produk](Screenshot/14-Pencarian%20Produk.png)
+
+**Edit produk**
+
+![Edit produk](Screenshot/16-Edit%20Produk.png)
+
+## ⚙️ Instalasi dan Menjalankan Aplikasi
+
+### Persyaratan
+
+Pastikan perangkat sudah memiliki PHP, Composer, MySQL, dan XAMPP.
+
+### Langkah 1 — Clone repository
+
+```bash
+git clone https://github.com/AnandaElfira15/stockify-laravel.git
+cd stockify-laravel
+```
+
+### Langkah 2 — Instal dependensi
+
+```bash
+composer install
+```
+
+### Langkah 3 — Siapkan file environment
+
+```bash
+cp .env.example .env
+```
+
+Di Windows PowerShell, perintah alternatifnya:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+### Langkah 4 — Buat application key
+
+```bash
+php artisan key:generate
+```
+
+### Langkah 5 — Siapkan database
+
+Jalankan MySQL melalui XAMPP, lalu buat database bernama `stockify_laravel`.
+
+Sesuaikan konfigurasi database di file `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=stockify_laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Sesuaikan nama pengguna dan kata sandi jika konfigurasi MySQL kamu berbeda.
+
+### Langkah 6 — Jalankan migration dan seeder
+
+```bash
+php artisan migrate --seed
+```
+
+**Catatan:** Perintah ini ditujukan untuk database baru atau database yang sudah dipersiapkan sesuai migration dan seeder proyek. Jangan menjalankan `migrate:fresh` pada database yang berisi data penting karena perintah tersebut menghapus tabel terlebih dahulu.
+
+### Langkah 7 — Jalankan aplikasi
+
+```bash
+php artisan serve
+```
+
+Buka aplikasi melalui:
+
+http://127.0.0.1:8000
+
+## 📁 Struktur Folder
+
+```text
+stockify-laravel/
+├── app/
+│   ├── Http/Controllers/
+│   └── Models/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/
+│   └── views/
+├── routes/
+│   └── web.php
+├── Screenshot/
+└── README.md
+```
+
+## 🎯 Tujuan Proyek
+
+Proyek ini dibuat sebagai latihan pengembangan aplikasi web menggunakan Laravel, termasuk penerapan migration, model, controller, routing, Blade, relasi database, dan operasi CRUD.
+
+## 👩‍💻 Repository
+
+GitHub: https://github.com/AnandaElfira15/stockify-laravel
