@@ -6,10 +6,17 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    public function test_the_application_returns_a_successful_response(): void
+    public function test_the_application_redirects_guests_to_login(): void
     {
         $response = $this->get('/');
 
-        $response->assertRedirect('/dashboard');
+        $response->assertRedirect('/login');
+    }
+
+    public function test_the_login_page_can_be_opened(): void
+    {
+        $response = $this->get('/login');
+
+        $response->assertOk();
     }
 }
