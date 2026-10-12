@@ -1,141 +1,84 @@
 # Stockify — Inventory Management System
 
-Aplikasi manajemen inventaris berbasis web yang dibangun menggunakan Laravel dan MySQL. Stockify membantu pengguna mengelola data produk, kategori, supplier, serta mencatat pergerakan stok masuk dan keluar.
+## 1. Deskripsi Proyek
 
-## ✨ Fitur Utama
+Stockify adalah aplikasi web untuk mengelola persediaan barang. Project ini dikembangkan menggunakan Laravel sebagai kelanjutan dari Inventory Management System pada Pertemuan 4.
 
-- **Dashboard** — Menampilkan ringkasan data inventaris.
-- **Manajemen Produk** — Menambah, melihat, mengubah, mencari, dan menghapus produk.
-- **Manajemen Kategori** — Mengelola kategori barang.
-- **Manajemen Supplier** — Mengelola informasi pemasok.
-- **Pergerakan Stok** — Mencatat transaksi stok masuk dan stok keluar.
-- **Laporan** — Melihat data produk dan riwayat pergerakan stok berdasarkan periode.
-- **Validasi Data** — Memeriksa data yang dimasukkan melalui formulir aplikasi.
+Aplikasi ini membantu pengguna mengelola produk, kategori, supplier, pergerakan stok, laporan, dan akun pengguna.
 
-## 🛠️ Teknologi
+## 2. Teknologi yang Digunakan
 
-- PHP
+- PHP 8.2
 - Laravel
 - MySQL
-- Blade Template
-- HTML dan CSS
-- XAMPP
 - Composer
+- Blade Template Engine
+- Eloquent ORM
+- XAMPP
+- Git dan GitHub
 
-## 📸 Screenshot Aplikasi
+## 3. Fitur Aplikasi
 
-### 1. Dashboard
+- Login dan logout.
+- Hak akses Admin dan Staff.
+- Dashboard informasi persediaan.
+- CRUD produk dan kategori.
+- Pengelolaan supplier.
+- Pencatatan barang masuk dan barang keluar.
+- Riwayat pergerakan stok.
+- Laporan persediaan.
+- Pencarian, filter, sorting, dan pagination produk.
+- Validasi input formulir.
+- Manajemen pengguna khusus Admin.
 
-Menampilkan ringkasan inventaris dan informasi stok.
+## 4. Arsitektur MVC
 
-![Dashboard 1](Screenshot/01-dashboard.png)
+Project ini menggunakan pola MVC (Model, View, Controller).
 
-![Dashboard 2](Screenshot/02-dashboard.png)
+- **Model:** Mengelola data dan interaksi dengan database melalui Eloquent ORM.
+- **View:** Menampilkan antarmuka aplikasi menggunakan Blade.
+- **Controller:** Memproses request, menjalankan logika aplikasi, dan menentukan response.
 
-### 2. Manajemen Produk
+Alur request aplikasi:
 
-Halaman daftar produk dan pengelolaan data barang.
+Browser → Route → Controller → Model → Database → Response.
 
-![Daftar Produk](Screenshot/03-produk.png)
+## 5. Persyaratan Sistem
 
-### 3. Manajemen Kategori
+- PHP 8.2 atau versi yang kompatibel dengan project.
+- Composer.
+- MySQL.
+- Git.
+- XAMPP atau lingkungan server PHP dan MySQL yang sesuai.
 
-Halaman pengelolaan kategori barang.
+## 6. Cara Instalasi
 
-![Daftar Kategori](Screenshot/04-kategori.png)
-
-![Detail Kategori](Screenshot/15-Detail%20Kategori.png)
-
-### 4. Manajemen Supplier
-
-Halaman untuk melihat dan mengelola data supplier.
-
-![Supplier 1](Screenshot/05-supplier.png)
-
-![Supplier 2](Screenshot/06-supplier.png)
-
-### 5. Pergerakan Stok
-
-Halaman pencatatan dan pemantauan stok masuk maupun stok keluar.
-
-![Pergerakan Stok](Screenshot/07-PergerakanStok.png)
-
-### 6. Laporan
-
-Halaman laporan produk dan pergerakan stok.
-
-![Laporan 1](Screenshot/08-Laporan.png)
-
-![Laporan 2](Screenshot/09-Laporan.png)
-
-### 7. Pengelolaan Data Produk
-
-Contoh tampilan ketika menghapus, menambahkan, mencari, dan mengedit produk.
-
-**Produk sebelum dihapus**
-
-![Produk sebelum dihapus](Screenshot/10-Produk%20Di%20Hapus.png)
-
-**Konfirmasi atau hasil penghapusan produk**
-
-![Produk berhasil dihapus](Screenshot/11-Produk%20Berhasil%20Di%20Hapus.png)
-
-**Form tambah produk**
-
-![Tambah produk 1](Screenshot/12-Tambah%20Produk.png)
-
-![Tambah produk 2](Screenshot/13-Tambah%20Produk.png)
-
-**Pencarian produk**
-
-![Pencarian produk](Screenshot/14-Pencarian%20Produk.png)
-
-**Edit produk**
-
-![Edit produk](Screenshot/16-Edit%20Produk.png)
-
-## ⚙️ Instalasi dan Menjalankan Aplikasi
-
-### Persyaratan
-
-Pastikan perangkat sudah memiliki PHP, Composer, MySQL, dan XAMPP.
-
-### Langkah 1 — Clone repository
+### A. Clone repository
 
 ```bash
 git clone https://github.com/AnandaElfira15/stockify-laravel.git
 cd stockify-laravel
 ```
 
-### Langkah 2 — Instal dependensi
+### B. Instal dependensi
 
 ```bash
 composer install
 ```
 
-### Langkah 3 — Siapkan file environment
+### C. Siapkan file environment
 
-```bash
-cp .env.example .env
-```
-
-Di Windows PowerShell, perintah alternatifnya:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-### Langkah 4 — Buat application key
+Salin `.env.example` menjadi `.env`, lalu jalankan:
 
 ```bash
 php artisan key:generate
 ```
 
-### Langkah 5 — Siapkan database
+### D. Siapkan database
 
-Jalankan MySQL melalui XAMPP, lalu buat database bernama `stockify_laravel`.
+Buat database kosong melalui phpMyAdmin. Nama database harus sesuai dengan `DB_DATABASE` pada file `.env`.
 
-Sesuaikan konfigurasi database di file `.env`:
+Contoh konfigurasi:
 
 ```env
 DB_CONNECTION=mysql
@@ -146,17 +89,19 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Sesuaikan nama pengguna dan kata sandi jika konfigurasi MySQL kamu berbeda.
+Sesuaikan konfigurasi jika pengaturan MySQL berbeda.
 
-### Langkah 6 — Jalankan migration dan seeder
+### E. Jalankan migration dan seeder
+
+Untuk database baru yang masih kosong:
 
 ```bash
 php artisan migrate --seed
 ```
 
-**Catatan:** Perintah ini ditujukan untuk database baru atau database yang sudah dipersiapkan sesuai migration dan seeder proyek. Jangan menjalankan `migrate:fresh` pada database yang berisi data penting karena perintah tersebut menghapus tabel terlebih dahulu.
+Perintah ini membuat tabel yang belum tersedia dan menjalankan seeder untuk mengisi data awal.
 
-### Langkah 7 — Jalankan aplikasi
+### F. Jalankan aplikasi
 
 ```bash
 php artisan serve
@@ -166,28 +111,26 @@ Buka aplikasi melalui:
 
 http://127.0.0.1:8000
 
-## 📁 Struktur Folder
+## 7. Pengujian
 
-```text
-stockify-laravel/
-├── app/
-│   ├── Http/Controllers/
-│   └── Models/
-├── database/
-│   ├── migrations/
-│   └── seeders/
-├── resources/
-│   └── views/
-├── routes/
-│   └── web.php
-├── Screenshot/
-└── README.md
+Jalankan pengujian otomatis menggunakan:
+
+```bash
+php artisan test
 ```
 
-## 🎯 Tujuan Proyek
+Pada pengujian terakhir, 3 tes berhasil dengan 4 assertions. Pengujian tersebut mencakup pengalihan pengunjung yang belum login dan akses halaman login. Pengujian ini belum mencakup seluruh fitur CRUD secara otomatis.
 
-Proyek ini dibuat sebagai latihan pengembangan aplikasi web menggunakan Laravel, termasuk penerapan migration, model, controller, routing, Blade, relasi database, dan operasi CRUD.
+## 8. Screenshot Aplikasi
 
-## 👩‍💻 Repository
+Screenshot aplikasi disimpan di folder `Screenshot/` pada repository jika file tersebut tersedia, untuk menunjukkan tampilan dan pengujian aplikasi.
+
+## 9. Repository
 
 GitHub: https://github.com/AnandaElfira15/stockify-laravel
+
+## 10. Tujuan Pengembangan
+
+Pengembangan ini bertujuan menerapkan konsep Laravel, termasuk routing, controller, model, relasi Eloquent, migration, factory, seeder, Blade, validasi formulir, dan pengelolaan data persediaan.
+
+Pengembangan dari Pertemuan 4 ke Pertemuan 5 dilakukan dengan mempertahankan fungsi utama sistem persediaan barang.
